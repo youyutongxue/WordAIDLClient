@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onServiceConnected(ComponentName name, IBinder service) {
                 mIwordAidlInterface = IWordAidlInterface.Stub.asInterface(service);
-                Log.i("------>>>", "aaa");
             }
 
             @Override
@@ -68,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         } else {
-            Toast.makeText(this, "连接断开", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "远程连接不成功", Toast.LENGTH_SHORT).show();
         }
     }
 }
